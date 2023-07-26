@@ -1,0 +1,26 @@
+#phrizm-images-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#phrizm-images-preview .phrizm-image {
+  flex: 1 0 18%;  /* Adatta in base alle tue esigenze */
+  margin: 1%;  /* Adatta in base alle tue esigenze */
+  position: relative; /* Questo è necessario per posizionare correttamente l'elemento .remove-image */
+}
+
+.remove-image {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  cursor: pointer;
+  display: none; /* Nasconde la X di default */
+}
+
+#phrizm-images-preview .phrizm-image:hover .remove-image {
+  display: block; /* Mostra la X quando il mouse è sopra l'immagine */
+}
